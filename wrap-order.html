@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Flex boxes</title>
+        <!-- Required meta tags -->
+        <style>
+            .container {
+                background-color: antiquewhite;
+                margin: 5% auto;
+                width: 80%;
+            }
+            .first-element,
+            .second-element,
+            .third-element {
+                border: 1px solid;
+                padding: 20px;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-items: center;
+            }
+            .first-element {
+                justify-content: flex-start;
+            }
+            .second-element {
+                justify-content: center;
+            }
+            .third-element {
+                justify-content: flex-start;
+            }
+            .flex-item {
+                border: 1px solid red;
+                width: 25%;
+                height: 200px;
+                margin: 1%;
+                padding: 2%;
+            }
+            .first-element .flex-item {
+                background-color: cadetblue;
+            }
+            .second-element .flex-item {
+                background-color: brown;
+            }
+            .second-element .item1 {
+                order: 1;
+            }
+            .second-element .item2 {
+                order: 5;
+            }
+            .second-element .item3 {
+                order: 4;
+            }
+            .second-element .item4 {
+                order: 3;
+            }
+            .second-element .item5 {
+                order: 2;
+            }
+            .third-element .flex-item {
+                background-color: coral;
+            }
+            .third-element .item1 {
+                /* flex-grow: 1;
+                flex-shrink:1;
+                flex-basis: 50px; */
+                flex: auto;
+            }
+            .third-element .item2 {
+                flex-grow: 2;
+                flex-shrink: 2;
+                flex-basis: 50px;
+            }
+            .third-element .item3 {
+                flex-grow: 3;
+                flex-shrink: 3;
+                flex-basis: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="first-element">
+                <div class="flex-item item1">
+                    <h2>1st element</h2>
+                    <p>Wrap Example</p>
+                </div>
+                <div class="flex-item item2">
+                    <h2>2nd element</h2>
+                    <p>Wrap Example</p>
+                </div>
+                <div class="flex-item item3">
+                    <h2>3rd element</h2>
+                    <p>Wrap Example</p>
+                </div>
+                <div class="flex-item item4">
+                    <h2>4th element</h2>
+                    <p>Wrap Example</p>
+                </div>
+                <div class="flex-item item5">
+                    <h2>5th element</h2>
+                    <p>Wrap Example</p>
+                </div>
+            </div>
+
+            <div class="second-element">
+                <div class="flex-item item1">
+                    <h2>1st element</h2>
+                    <p>Order Example</p>
+                </div>
+                <div class="flex-item item2">
+                    <h2>2nd element</h2>
+                    <p>Order Example</p>
+                </div>
+                <div class="flex-item item3">
+                    <h2>3rd element</h2>
+                    <p>Order Example</p>
+                </div>
+                <div class="flex-item item4">
+                    <h2>4th element</h2>
+                    <p>Order Example</p>
+                </div>
+                <div class="flex-item item5">
+                    <h2>5th element</h2>
+                    <p>Order Example</p>
+                </div>
+            </div>
+
+            <div class="third-element">
+                <div class="flex-item item1">
+                    <h2>1st element</h2>
+                    <p>Flex size description</p>
+                </div>
+                <div class="flex-item item2">
+                    <h2>2nd element</h2>
+                    <p>Flex size description</p>
+                </div>
+                <div class="flex-item item3">
+                    <h2>3rd element</h2>
+                    <p>Flex size description</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
